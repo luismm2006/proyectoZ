@@ -1,0 +1,24 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Survivors } from '../pages/survivors/survivors';
+import { Survivor } from '../interfaces/survivor';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class BunkerService {
+  private apiUrlSurvivor = "http://localhost:3000/supervivientes";
+
+  constructor(private http: HttpClient){
+
+  }
+
+  getSupervivientes(): Observable<Survivor[]>{
+    return this.http.get<Survivor[]>(this.apiUrlSurvivor);
+  }
+
+  getSuperviviente(id : number) : Observable<Survivor>{
+    return this.http.get<Survivor>(this.apiUrlSurvivor + "/" + id);
+  }
+}

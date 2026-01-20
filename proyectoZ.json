@@ -1,0 +1,106 @@
+{
+  "supervivientes": [
+    {
+      "id": "1",
+      "nombre": "Sarah Connor",
+      "rango": "Comandante",
+      "estado": "ESTABLE",
+      "ubicacion": "Ala Norte",
+      "email": "s.connor@resistance.net",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+    },
+    {
+      "id": "2",
+      "nombre": "Ellen Ripley",
+      "rango": "Teniente",
+      "estado": "CRÍTICO",
+      "ubicacion": "Enfermería",
+      "email": "ripley@nostromo.corp",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Ripley"
+    },
+    {
+      "id": "3",
+      "nombre": "Joel Miller",
+      "rango": "Explorador",
+      "estado": "ESTABLE",
+      "ubicacion": "Zona Exterior",
+      "email": "joel.m@fireflies.org",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Joel"
+    },
+    {
+      "id": "4",
+      "nombre": "Isaac Clarke",
+      "rango": "Ingeniero",
+      "estado": "ESTABLE",
+      "ubicacion": "Sala de Máquinas",
+      "email": "isaac@ishimura.eng",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Isaac"
+    },
+    {
+      "id": "5",
+      "nombre": "Gordan Freeman",
+      "rango": "Científico",
+      "estado": "DESAPARECIDO",
+      "ubicacion": "Laboratorio Lambda",
+      "email": "g.freeman@blackmesa.res",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Gordon"
+    }
+  ],
+  "inventario": [
+    {
+      "id": "inv-001",
+      "item": "Raciones de Combate (MRE)",
+      "cantidad": 450,
+      "categoria": "Comida",
+      "critico": false
+    },
+    {
+      "id": "inv-002",
+      "item": "Kits de Primeros Auxilios",
+      "cantidad": 4,
+      "categoria": "Salud",
+      "critico": true
+    },
+    {
+      "id": "inv-003",
+      "item": "Munición 9mm",
+      "cantidad": 1200,
+      "categoria": "Defensa",
+      "critico": false
+    },
+    {
+      "id": "inv-004",
+      "item": "Filtros de Aire N95",
+      "cantidad": 12,
+      "categoria": "Soporte Vital",
+      "critico": true
+    },
+    {
+      "id": "inv-005",
+      "item": "Baterías de Uranio",
+      "cantidad": 2,
+      "categoria": "Energía",
+      "critico": true
+    }
+  ],
+  "tareas": [
+    {
+      "id": "tsk-1",
+      "titulo": "Revisar integridad del casco en el Sector 7",
+      "prioridad": "alta",
+      "completada": false
+    },
+    {
+      "id": "tsk-2",
+      "titulo": "Inventariar latas de melocotones",
+      "prioridad": "baja",
+      "completada": true
+    },
+    {
+      "id": "tsk-3",
+      "titulo": "Purgar filtros de ventilación",
+      "prioridad": "media",
+      "completada": false
+    }
+  ]
+}
