@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+/* Importamos una fuente pixelada o tipo consola de Google Fonts (Opcional pero recomendado) */
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap');
+
+:root {
+  /* Paleta de Colores Z-0 */
+  --z0-black: #050505;       /* Fondo casi negro */
+  --z0-dark-gray: #1a1a1a;   /* Paneles */
+  --z0-green: #00ff41;       /* Verde Terminal brillante */
+  --z0-green-dim: #008f11;   /* Verde apagado */
+  --z0-alert: #ff3333;       /* Rojo Alerta */
+  --z0-font: 'Share Tech Mono', 'Courier New', monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--z0-black);
+  color: var(--z0-green);
+  font-family: var(--z0-font);
+  overflow-x: hidden; /* Evitar scroll lateral */
+}
+
+/* Scrollbar personalizada (para Chrome/Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--z0-dark-gray);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--z0-green-dim);
+  border: 1px solid var(--z0-black);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--z0-green);
+}
