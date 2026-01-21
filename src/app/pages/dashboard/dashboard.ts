@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { BunkerService } from '../../service/bunker-service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class Dashboard {
 
+  private bunkerService = inject(BunkerService);
+
+  supervivientes = this.bunkerService.survivors;
+
+  ngOnInit() : void {
+    this.bunkerService.getSupervivientes();
+  }
+
+  countSurvivor = computed(()=>this.supervivientes().length);
 }
