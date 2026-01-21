@@ -1,0 +1,143 @@
+/* --- CONTENEDOR PRINCIPAL DE LA FICHA --- */
+.ficha-superviviente {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+
+  background: rgba(0, 20, 0, 0.85);
+  border: 2px solid var(--z0-green-dim);
+  border-radius: 12px;
+
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.2),
+              inset 0 0 10px rgba(0, 255, 65, 0.05);
+
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.ficha-superviviente:hover {
+  border-color: var(--z0-green);
+  box-shadow: 0 0 25px rgba(0, 255, 65, 0.35),
+              inset 0 0 12px rgba(0, 255, 65, 0.15);
+}
+
+/* --- AVATAR --- */
+.ficha-avatar img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+
+  border: 2px solid var(--z0-green-dim);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.ficha-superviviente:hover .ficha-avatar img {
+  transform: scale(1.05);
+  border-color: var(--z0-green);
+  box-shadow: 0 0 18px var(--z0-green);
+}
+
+/* --- NOMBRE --- */
+.ficha-nombre {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  color: var(--z0-green);
+  text-shadow: 0 0 6px var(--z0-green);
+}
+
+/* --- BLOQUE DE DATOS --- */
+.ficha-datos {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* Cada línea de dato */
+.dato {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+
+  background: rgba(0, 30, 0, 0.5);
+  border: 1px solid var(--z0-green-dim);
+  border-radius: 6px;
+
+  transition: all 0.3s ease;
+}
+
+.dato:hover {
+  border-color: var(--z0-green);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.25);
+}
+
+/* Etiquetas */
+.label {
+  color: var(--z0-green);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Valores */
+.valor {
+  color: var(--z0-green-dim);
+  transition: color 0.3s ease;
+}
+
+.dato:hover .valor {
+  color: var(--z0-green);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .ficha-superviviente {
+    padding: 1.5rem;
+  }
+
+  .dato {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+button[routerLink] {
+  padding: 10px 25px;
+  margin-top: 1.5rem;
+
+  background: rgba(0, 20, 0, 0.85);
+  color: var(--z0-green-dim);
+
+  border: 2px solid var(--z0-green-dim);
+  border-radius: 6px;
+
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.15);
+}
+
+/* Hover criminal */
+button[routerLink]:hover {
+  background: var(--z0-green);
+  color: var(--z0-black);
+
+  border-color: var(--z0-green);
+  box-shadow: 0 0 18px var(--z0-green);
+  transform: scale(1.05);
+}
+
+/* Click */
+button[routerLink]:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 25px var(--z0-green);
+}

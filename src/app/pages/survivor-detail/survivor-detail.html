@@ -1,2 +1,38 @@
-<p>survivor-detail works!</p>
-<p> Survivor id: {{id}}</p>
+<div class="ficha-superviviente">
+
+  <!-- Avatar -->
+  <div class="ficha-avatar">
+    <img [src]="survivor.avatar" alt="{{ survivor.nombre }}">
+  </div>
+
+  <!-- Nombre -->
+  <h2 class="ficha-nombre">{{ survivor.nombre }}</h2>
+
+  <!-- Datos -->
+  <div class="ficha-datos">
+
+    <div class="dato">
+      <span class="label">Rango:</span>
+      <span class="valor">{{ survivor.rango }}</span>
+    </div>
+
+    <div class="dato">
+      <span class="label">Estado:</span>
+      <span class="valor">{{ survivor.estado }}</span>
+    </div>
+
+    <div class="dato">
+      <span class="label">Ubicación:</span>
+      <span class="valor">{{ survivor.ubicacion }}</span>
+    </div>
+
+    <div class="dato">
+      <span class="label">Email:</span>
+      <span class="valor">{{ survivor.email }}</span>
+    </div>
+    <button [routerLink]="['/survivors']">
+        Volver
+    </button>
+  </div>
+
+</div>

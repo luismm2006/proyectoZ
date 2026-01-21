@@ -1,0 +1,72 @@
+/* --- TARJETA CONTENEDORA --- */
+.survivor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1.5rem;
+  margin: 1rem 0;
+
+  background-color: rgba(0, 20, 0, 0.85);
+  border: 2px solid var(--z0-green-dim);
+  border-radius: 10px;
+
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.15);
+  transition: all 0.3s ease;
+}
+
+.survivor-card:hover {
+  border-color: var(--z0-green);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+/* --- IMAGEN DEL SUPERVIVIENTE --- */
+.avatar {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+
+  border: 2px solid var(--z0-green-dim);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.25);
+
+  transition: all 0.3s ease;
+}
+
+.survivor-card:hover .avatar {
+  transform: scale(1.05);
+  border-color: var(--z0-green);
+  box-shadow: 0 0 18px var(--z0-green);
+}
+
+/* --- BOTÓN ESTILO BUNKER --- */
+.survivor-card button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background-color: rgba(0, 20, 0, 0.9);
+  color: var(--z0-green-dim);
+
+  border: 2px solid var(--z0-green-dim);
+  border-radius: 6px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover criminal */
+.survivor-card button:hover {
+  color: var(--z0-black);
+  background-color: var(--z0-green);
+  border-color: var(--z0-green);
+  box-shadow: 0 0 12px var(--z0-green);
+  font-weight: bold;
+}
+
+/* Click */
+.survivor-card button:active {
+  transform: scale(0.95);
+}

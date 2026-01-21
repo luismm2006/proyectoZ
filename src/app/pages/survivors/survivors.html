@@ -2,7 +2,6 @@
 
 <div>
     @for(superviviente of supervivientes(); track superviviente.id){
-        <h3>{{superviviente.nombre}}</h3>
-        <img src="{{superviviente.avatar}}" alt="">
+        <app-survivor-card [survivor]="superviviente"></app-survivor-card>
     }
 </div>

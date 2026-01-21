@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Survivors } from '../pages/survivors/survivors';
 import { Survivor } from '../interfaces/survivor';
@@ -13,9 +13,14 @@ export class BunkerService {
   constructor(private http: HttpClient){
 
   }
+  private _survivor = signal<Survivor[]>([]);
+  survivors = this._survivor.asReadonly();
 
-  getSupervivientes(): Observable<Survivor[]>{
-    return this.http.get<Survivor[]>(this.apiUrlSurvivor);
+  getSupervivientes(){
+    this.http.get<Survivor[]>(this.apiUrlSurvivor).subscribe({
+      next: (data) => this._survivor.set(data),
+      error: (error) => console.error("Error cargando supervivientes")
+    });
   }
 
   getSuperviviente(id : number) : Observable<Survivor>{
