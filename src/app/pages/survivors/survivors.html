@@ -1,5 +1,5 @@
 <label for="buscador">Buscar personal: </label>
-<input type="text" name="buscador" id="buscador" [ngModel]="filtroNombre()" (ngModelChange)="actualizarFiltroNombre($event)">
+<input type="text" name="buscador" id="buscador" [(ngModel)]="filtro" (ngModelChange)="actualizarFiltroNombre($event)">
 <div>
     @for(filtN of filtNombre(); track filtN.id){
         <app-survivor-card  [survivor]="filtN"></app-survivor-card>

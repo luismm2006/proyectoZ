@@ -1,4 +1,4 @@
-import { Component, computed, inject, Input, Output, signal } from '@angular/core';
+import { Component, computed, inject, Input, Output, Signal, signal } from '@angular/core';
 import { BunkerService } from '../../service/bunker-service';
 import { AsyncPipe } from '@angular/common';
 import { Survivor } from '../../interfaces/survivor';
@@ -19,12 +19,12 @@ export class Survivors {
   ngOnInit(): void {
     this.bunkerService.getSupervivientes();
   }
-
-  filtroNombre = this.bunkerService.survivorFiltroNombre; 
+  filtro:string = ""
+  filtroNombre: Signal<Survivor[]> = computed(() => this.supervivientes().filter(s => s.nombre.toLowerCase().includes(this.filtro.toLowerCase()) ) )
   
   actualizarFiltroNombre(valor: string) { 
     this.bunkerService.setFiltroNombre(valor); 
   }
-  filtNombre = computed(() => this.supervivientes().filter(s => s.nombre.toLowerCase().includes(this.filtroNombre().toLowerCase()) ) );
+  // filtNombre = computed(() => this.supervivientes().filter(s => s.nombre.toLowerCase().includes(this.filtroNombre().toLowerCase()) ) );
 }
 
